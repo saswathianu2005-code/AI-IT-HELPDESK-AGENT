@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI IT Helpdesk Agent</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2>AI Helpdesk</h2>
+            <p class="subtitle">IBM IT Support Agent</p>
+
+            <div class="menu">
+                <button>🏠 Dashboard</button>
+                <button>🎫 My Tickets</button>
+                <button>💬 AI Assistant</button>
+                <button>⚙️ Settings</button>
+            </div>
+
+            <div class="status">
+                <span class="dot"></span>
+                AI Agent Online
+            </div>
+        </aside>
+
+
+        <!-- Main Content -->
+        <main class="main">
+
+            <header class="topbar">
+                <div>
+                    <h1>AI IT Helpdesk Agent</h1>
+                    <p>How can I help you today?</p>
+                </div>
+
+                <div class="user">
+                    👤 User
+                </div>
+            </header>
+
+
+            <!-- Quick Actions -->
+            <section class="quick-actions">
+
+                <button onclick="quickMessage('My laptop is not connecting to Wi-Fi')">
+                    📶 Wi-Fi Problem
+                </button>
+
+                <button onclick="quickMessage('I forgot my password')">
+                    🔑 Password Reset
+                </button>
+
+                <button onclick="quickMessage('My computer is running very slowly')">
+                    💻 Slow Computer
+                </button>
+
+                <button onclick="quickMessage('I cannot access my email')">
+                    📧 Email Problem
+                </button>
+
+            </section>
+
+
+            <!-- Chat Box -->
+            <section class="chat-container">
+
+                <div class="chat-header">
+                    <div>
+                        <strong>🤖 AI Support Agent</strong>
+                        <span>Online</span>
+                    </div>
+                </div>
+
+
+                <div id="chatBox" class="chat-box">
+
+                    <div class="message bot">
+                        <div class="avatar">🤖</div>
+                        <div class="message-content">
+                            Hello! 👋 I'm your AI IT Helpdesk Agent.
+                            <br><br>
+                            Tell me your IT problem and I'll try to help you.
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <!-- Input Area -->
+                <div class="input-area">
+
+                    <input
+                        type="text"
+                        id="userInput"
+                        placeholder="Describe your IT problem..."
+                        onkeypress="handleKeyPress(event)"
+                    >
+
+                    <button onclick="sendMessage()" class="send-btn">
+                        Send ➤
+                    </button>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
